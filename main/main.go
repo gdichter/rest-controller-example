@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"restfulProject/controller"
+	"github.com/gdichter/rest-controller-example/controller"
 )
 
 func main() {

@@ -7,7 +7,7 @@ import (
 	"net/http"
 	"io/ioutil"
 	"encoding/json"
-	"restfulProject/dtos"
+	"github.com/gdichter/rest-controller-example/dtos"
 )
 
 func MyRouter() {
