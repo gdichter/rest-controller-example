@@ -1,8 +1,8 @@
 # rest-controller-example
 
 ## Instructions for use
-* clone repo to $GOPATH/src
-* in IDE File/Open and navigate to $GOPATH/src/rest-controller-example
+* go get github.com/gdichter/rest-controller-example
+* in IDE File/Open and navigate to $GOPATH/src/github.com/gdichter/rest-controller-example
 
 ## Useful curls
 
@@ -16,7 +16,7 @@ returns `{"this":"that-NEW","arr":[{"a1":2,"b1":"bee one-UPDATED"}]}`
 
 **GET /stuff**
 ```
-curl -v -X POST http://localhost:3000/stuff'
+curl -v -X GET http://localhost:3000/stuff'
 ```
 returns from `Get: here is some stuff`
 
