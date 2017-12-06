@@ -1,2 +1,4 @@
 .idea
 main/main
+vendor/*
+.DS_Store
