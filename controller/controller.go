@@ -7,6 +7,7 @@ import (
 	"net/http"
 	"github.com/gdichter/rest-controller-example/stuff"
 	"github.com/gdichter/rest-controller-example/ping"
+	"github.com/gdichter/rest-controller-example/users"
 )
 
 func MyRouter() {
@@ -17,6 +18,9 @@ func MyRouter() {
 	r.Use(middleware.Recoverer)
 	r.Use(middleware.URLFormat)
 	r.Use(render.SetContentType(render.ContentTypeJSON))
+
+	r.Get("/users/{userId}", users.HandleGetUsers())
+
 	r.Get("/ping", ping.HandleGetPing())
 
 	r.Route("/stuff", func(r chi.Router) {
@@ -27,5 +31,6 @@ func MyRouter() {
 	http.ListenAndServe(":3000", r)
 
 }
+
 
 
