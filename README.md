@@ -27,3 +27,19 @@ curl -v -X GET http://localhost:3000/ping -H "the-header:a new fun header value"
 ```
 
 returns `pong.  you sent a new fun header value`
+
+
+**GET /users/{userId}**
+```
+curl -v -X GET http://localhost:3000/users/user1
+```
+
+returns `GET /users/{userId}: user id is user1`
+
+
+**GET /users?userId=user2**
+```
+curl -v -X GET http://localhost:3000/users?userId=user2
+```
+
+returns `GET /users: user id param is user2`

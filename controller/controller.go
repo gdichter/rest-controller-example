@@ -19,7 +19,10 @@ func MyRouter() {
 	r.Use(middleware.URLFormat)
 	r.Use(render.SetContentType(render.ContentTypeJSON))
 
-	r.Get("/users/{userId}", users.HandleGetUsers())
+	r.Route("/users", func(r chi.Router) {
+		r.Get("/{userId}", users.HandleGetUsersWithUserId())
+		r.Get("/", users.HandleGetUsers())
+	})
 
 	r.Get("/ping", ping.HandleGetPing())
 
