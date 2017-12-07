@@ -43,3 +43,4 @@ curl -v -X GET http://localhost:3000/users?userId=user2
 ```
 
 returns `GET /users: user id param is user2`
+# bmeenan-go-sandbox
